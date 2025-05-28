@@ -1,1 +1,169 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laryngeal Contributions to Adult OSA</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Laryngeal Contributions to Adult Obstructive Sleep Apnea</h1>
+    <p class="subtitle">Exploring the Role of Epiglottic and Laryngeal Features</p>
+  </header>
+
+  <main>
+    <section id="abstract">
+      <h2>Abstract</h2>
+      <p>
+        Obstructive Sleep Apnea (OSA) is a prevalent disorder characterized by repetitive upper airway collapse during sleep. While traditional research has focused on oropharyngeal and hypopharyngeal sites, emerging evidence underscores the significance of laryngeal structures, particularly the epiglottis, in OSA pathophysiology. This study investigates the prevalence and implications of epiglottic prolapse and other laryngeal anomalies in adult OSA patients. Our findings reveal a notable occurrence of epiglottic collapse, especially among younger adults, suggesting alternative phenotypes of OSA. The study emphasizes the need for standardized diagnostic protocols and highlights potential therapeutic interventions targeting laryngeal structures.
+      </p>
+    </section>
+
+    <section id="discussion">
+      <h2>Discussion</h2>
+      <h3>Laryngeal Contributions in OSA</h3>
+      <p>
+        The larynx plays a pivotal role in maintaining airway patency during sleep. Our study corroborates previous findings that epiglottic collapse is a significant contributor to airway obstruction in OSA patients. Notably, we observed a higher prevalence of epiglottic prolapse in younger adults, aligning with studies that suggest unique OSA phenotypes in this demographic. The moderate inter-rater reliability in identifying epiglottic prolapse indicates the potential for consistent diagnosis with standardized measures. However, the slight-to-fair agreement for laryngomalacia and post-cricoid redundancy highlights the challenges in assessing subtle laryngeal features, necessitating further refinement in diagnostic criteria and training.
+      </p>
+
+      <h3>Role of Epiglottic Pathology</h3>
+      <p>
+        Epiglottic prolapse has emerged as a critical factor in OSA pathogenesis. Our observations indicate that younger patients exhibit more pronounced epiglottic collapse, which may contribute to the ineffectiveness of conventional treatments like CPAP or uvulopalatopharyngoplasty. Interventions such as epiglottopexy have shown promise in alleviating airway obstruction in these cases. Consistent with prior studies, patients undergoing epiglottopexy demonstrated significant reductions in apnea-hypopnea indices, underscoring the procedure's potential efficacy.
+      </p>
+
+      <h3>Complexities of Partial Laryngectomy</h3>
+      <p>
+        Partial laryngectomy, though performed in a minority of cases, presents unique challenges. Patients with a history of partial laryngectomy exhibited increased epiglottic irregularities and a higher incidence of moderate-to-severe OSA. These findings suggest that surgical alterations to laryngeal anatomy can disrupt normal airway dynamics, predisposing patients to sleep-disordered breathing. Comprehensive studies are needed to elucidate the mechanisms by which laryngeal resections influence airway collapsibility during sleep.
+      </p>
+    </section>
+
+    <section id="future-directions">
+      <h2>Future Directions</h2>
+      <p>
+        Advancements in diagnostic and therapeutic approaches are essential for addressing laryngeal contributions to OSA. Future research should focus on:
+      </p>
+      <ul>
+        <li>Developing standardized scoring systems for laryngeal anomalies to enhance diagnostic consistency.</li>
+        <li>Integrating advanced imaging techniques, such as 3D reconstruction and computational fluid dynamics, to better understand airway dynamics.</li>
+        <li>Investigating the genetic, collagen-related, and neuromuscular factors contributing to laryngeal laxity, particularly in younger patients.</li>
+        <li>Exploring the role of laryngeal sensory deficits in airway collapse and the potential of targeted therapies to mitigate these effects.</li>
+        <li>Conducting multicenter prospective studies employing uniform DISE protocols, potentially enhanced by AI-assisted image analysis, to refine laryngeal evaluations in OSA.</li>
+      </ul>
+    </section>
+
+    <section id="conclusion">
+      <h2>Conclusion</h2>
+      <p>
+        Our retrospective analysis underscores the significant role of epiglottic and laryngeal features in adult OSA. The variability in inter-rater reliability for different morphological measures highlights the necessity for standardized scoring protocols and examiner training. The prevalence of epiglottic prolapse among younger adults may explain the reduced efficacy of conventional treatments in this subgroup. Future research integrating advanced diagnostic techniques and collaborative efforts will be pivotal in refining strategies for identifying, quantifying, and treating laryngeal-driven airway obstruction in OSA.
+      </p>
+    </section>
+
+    <section id="references">
+      <h2>References</h2>
+      <ol>
+        <li>Dedhia RC, Rosen CA, Soose RJ. The role of the larynx in adult obstructive sleep apnea. Laryngoscope. 2014;124(4):1029-1034.</li>
+        <li>Francia-Lugo K, et al. Defining epiglottic collapse patterns in obstructive sleep apnea. J Clin Sleep Med. 2023;19(1):45-52.</li>
+        <li>Lee CH, et al. Predicting epiglottic collapse in patients with obstructive sleep apnea. J Clin Sleep Med. 2018;14(5):715-721.</li>
+        <li>Lan MC, et al. Epiglottis collapse in adult obstructive sleep apnea: A systematic review. Laryngoscope. 2015;125(3):736-741.</li>
+        <li>Kim H, et al. Adult obstructive sleep apnea and the larynx. Sleep Med Res. 2015;6(1):1-7.</li>
+        <!-- Add additional references as needed -->
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Department of Otolaryngology, University of Pittsburgh</p>
+  </footer>
+</body>
+</html>
+
+
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background-color: #004080;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header .subtitle {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+section h2 {
+  border-bottom: 2px solid #004080;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  color: #004080;
+}
+
+section h3 {
+  margin-top: 1.5rem;
+  color: #0066cc;
+}
+
+p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+ul {
+  margin-left: 1.5rem;
+  list-style-type: disc;
+}
+
+ol {
+  padding-left: 1.5rem;
+}
+
+footer {
+  background-color: #004080;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header .subtitle {
+    font-size: 1rem;
+  }
+
+  main {
+    padding: 0 0.5rem;
+  }
+}
