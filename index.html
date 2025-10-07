@@ -5,103 +5,1238 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Supplemental Information – Laryngeal Morphology in OSA Study</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f7f9fc;
-      color: #2d3748;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+      color: #2d3748;
+      line-height: 1.6;
+    }
+
     header {
-      background-color: #3182ce;
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
       color: #fff;
-      padding: 2rem;
+      padding: 4rem 2rem;
       text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      opacity: 0.95;
+    }
+
     .container {
-      max-width: 1200px;
+      max-width: 1400px;
       margin: auto;
-      padding: 2rem;
+      padding: 3rem 2rem;
     }
-    section {
-      background-color: #ffffff;
+
+    nav {
+      background: white;
       padding: 1.5rem;
       margin-bottom: 2rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      position: sticky;
+      top: 20px;
+      z-index: 100;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #2a5298;
+      padding: 0.75rem 1.5rem;
       border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s;
+      border: 2px solid transparent;
     }
+
+    nav a:hover {
+      background: #2a5298;
+      color: white;
+      border-color: #2a5298;
+    }
+
+    section {
+      background-color: #ffffff;
+      padding: 3rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+      border-radius: 16px;
+      animation: fadeIn 0.6s ease-in;
+      position: relative;
+      overflow: hidden;
+    }
+
+    section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     h2 {
-      border-bottom: 3px solid #3182ce;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-      color: #3182ce;
+      border-bottom: 4px solid #2a5298;
+      padding-bottom: 1rem;
+      margin-bottom: 2rem;
+      color: #2a5298;
+      font-size: 2.2rem;
+      font-weight: 700;
     }
+
+    h3 {
+      color: #1e3c72;
+      font-size: 1.6rem;
+      margin: 2rem 0 1rem 0;
+      font-weight: 600;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 70%, #f093fb 100%);
+      color: white;
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+      box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+    }
+
+    .highlight-box h3 {
+      color: white;
+      margin-top: 0;
+    }
+
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .stat-card {
+      background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%);
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      border-left: 5px solid #2a5298;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .stat-card:nth-child(1) { border-left-color: #667eea; }
+    .stat-card:nth-child(2) { border-left-color: #764ba2; }
+    .stat-card:nth-child(3) { border-left-color: #f093fb; }
+    .stat-card:nth-child(4) { border-left-color: #4facfe; }
+    .stat-card:nth-child(5) { border-left-color: #43e97b; }
+
+    .stat-value {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #2a5298;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-card:nth-child(1) .stat-value { color: #667eea; }
+    .stat-card:nth-child(2) .stat-value { color: #764ba2; }
+    .stat-card:nth-child(3) .stat-value { color: #f093fb; }
+    .stat-card:nth-child(4) .stat-value { color: #4facfe; }
+    .stat-card:nth-child(5) .stat-value { color: #43e97b; }
+
+    .stat-label {
+      font-size: 1.1rem;
+      color: #666;
+      line-height: 1.4;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 2rem 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    thead {
+      background: #2a5298;
+      color: white;
+    }
+
+    th {
+      padding: 1.25rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+
+    td {
+      padding: 1.25rem;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 1rem;
+    }
+
+    tbody tr {
+      background: white;
+      transition: background 0.2s;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #f8f9fa;
+    }
+
+    tbody tr:hover {
+      background: #e3f2fd;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .chart-container {
+      margin: 2rem 0;
+      padding: 2rem;
+      background: #f8f9fa;
+      border-radius: 12px;
+    }
+
+    .bar-chart {
+      margin: 2rem 0;
+    }
+
+    .bar-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .bar-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #2d3748;
+    }
+
+    .bar-background {
+      background: #e2e8f0;
+      height: 35px;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 15px;
+      color: white;
+      font-weight: 600;
+      border-radius: 20px;
+      transition: width 1.5s ease;
+    }
+
+    .key-finding {
+      background: #fff3cd;
+      border-left: 5px solid #ffc107;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.1rem;
+    }
+
+    .key-finding-blue {
+      background: #e3f2fd;
+      border-left-color: #2196f3;
+    }
+
+    .key-finding-purple {
+      background: #f3e5f5;
+      border-left-color: #9c27b0;
+    }
+
+    .key-finding-green {
+      background: #e8f5e9;
+      border-left-color: #4caf50;
+    }
+
+    .key-finding-pink {
+      background: #fce4ec;
+      border-left-color: #e91e63;
+    }
+
+    .method-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .method-card {
+      background: linear-gradient(135deg, #e8f4f8 0%, #ffffff 100%);
+      padding: 2rem;
+      border-radius: 12px;
+      border-top: 4px solid #2a5298;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .method-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .method-card h4 {
+      color: #2a5298;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .method-card-1 {
+      background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 100%);
+      border-top-color: #2196f3;
+    }
+
+    .method-card-2 {
+      background: linear-gradient(135deg, #f3e5f5 0%, #ffffff 100%);
+      border-top-color: #9c27b0;
+    }
+
+    .method-card-3 {
+      background: linear-gradient(135deg, #e8f5e9 0%, #ffffff 100%);
+      border-top-color: #4caf50;
+    }
+
+    .method-card-4 {
+      background: linear-gradient(135deg, #fff3e0 0%, #ffffff 100%);
+      border-top-color: #ff9800;
+    }
+
     ul {
       padding-left: 1.5rem;
+      margin: 1rem 0;
     }
-    img {
-      width: 100%;
-      max-height: 400px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 1rem;
+
+    li {
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
     }
+
+    .emphasis {
+      color: #2a5298;
+      font-weight: 700;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #2a5298;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-left: 0.5rem;
+    }
+
+    .significance {
+      color: #d9534f;
+      font-weight: 600;
+    }
+
     footer {
       text-align: center;
-      padding: 1rem;
-      background-color: #e2e8f0;
-      color: #4a5568;
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      color: white;
+      margin-top: 4rem;
+      font-size: 1.1rem;
+    }
+
+    .authors-list {
+      background: #f8f9fa;
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+    }
+
+    .comparison-table {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .comparison-table {
+        grid-template-columns: 1fr;
+      }
+      
+      .method-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      header h1 {
+        font-size: 2rem;
+      }
+      
+      .stats-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .pill {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      margin: 0.3rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .data-visualization {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      border-top: 3px solid #667eea;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .data-visualization::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Laryngeal Morphology and Its Role in Obstructive Sleep Apnea</h1>
-    <p>Detailed Supplemental Information and Analysis</p>
+    <p>Comprehensive Supplemental Information and Analysis</p>
+    <p style="margin-top: 1rem; font-size: 1.1rem; opacity: 0.9;">Harris, Alexandria, MD, MS and colleagues | UPMC Department of Otolaryngology</p>
   </header>
+
   <div class="container">
-    <section>
+    <nav>
+      <a href="#abstract">Abstract</a>
+      <a href="#demographics">Demographics</a>
+      <a href="#methods">Methods</a>
+      <a href="#results">Results</a>
+      <a href="#reliability">Reliability</a>
+      <a href="#findings">Key Findings</a>
+      <a href="#discussion">Discussion</a>
+      <a href="#conclusions">Conclusions</a>
+    </nav>
+
+    <section id="abstract">
       <h2>Comprehensive Abstract</h2>
-      <img src="https://via.placeholder.com/1200x400?text=Laryngeal+Morphology" alt="Laryngeal Morphology">
-      <p>
-        Laryngeal morphological features contribute significantly to airway obstruction in obstructive sleep apnea (OSA), though standardized evaluation methods are limited. We conducted a retrospective analysis involving fiberoptic laryngoscopy videos from 145 patients (88 OSA, 54 controls, 3 incomplete assessments) to investigate specific laryngeal anomalies and quantify reliability across features including laryngomalacia, arytenoid position, epiglottic shape/prolapse, and post-cricoid redundancy. Results indicated moderate inter-rater reliability specifically for epiglottic prolapse, with younger patients showing greater severity. Interestingly, traditional OSA risk factors such as obesity, COPD, and GERD did not predict laryngeal morphology outcomes, underscoring the independence of laryngeal anomalies as critical diagnostic and treatment targets.
-      </p>
+      <div class="highlight-box">
+        <h3>Study Overview</h3>
+        <p style="font-size: 1.15rem; line-height: 1.8;">
+          Laryngeal morphological features contribute significantly to airway obstruction in obstructive sleep apnea (OSA), 
+          though standardized evaluation methods remain limited. We conducted a retrospective analysis of fiberoptic laryngoscopy 
+          videos from <strong>142 patients (88 OSA, 54 controls)</strong> to investigate specific laryngeal anomalies and quantify 
+          reliability across multiple features including laryngomalacia, arytenoid position, epiglottic shape/prolapse, and 
+          post-cricoid redundancy.
+        </p>
+      </div>
+
+      <h3>Primary Findings</h3>
+      <div class="stats-container">
+        <div class="stat-card">
+          <div class="stat-value">κ = 0.318</div>
+          <div class="stat-label">Highest Inter-Rater Reliability<br>Epiglottic Prolapse<br><span class="significance">p < 0.001</span></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">β = -0.089</div>
+          <div class="stat-label">Age-Epiglottis Correlation<br>Younger = More Prolapse<br><span class="significance">p = 0.035</span></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">0</div>
+          <div class="stat-label">Traditional Risk Factors<br>Predicted Morphology<br>(BMI, GERD, COPD)</div>
+        </div>
+      </div>
+
+      <div class="key-finding">
+        <strong>Critical Insight:</strong> Traditional OSA risk factors such as obesity, COPD, and GERD did not predict 
+        laryngeal morphology outcomes, underscoring the independence of laryngeal anomalies as critical diagnostic and 
+        treatment targets, particularly in younger patients.
+      </div>
     </section>
 
-    <section>
-      <h2>Detailed Methods</h2>
-      <img src="https://via.placeholder.com/1200x400?text=Fiberoptic+Laryngoscopy" alt="Fiberoptic Laryngoscopy">
-      <p>
-        Patients underwent standardized fiberoptic laryngoscopy with evaluations conducted by two independent, blinded otolaryngologists. Cohen’s kappa assessed inter-rater reliability. Demographics including age, gender, BMI, and comorbidities were recorded. Logistic regression analyzed associations between laryngeal morphology and clinical factors like OSA severity, obesity, GERD, and COPD.
-      </p>
+    <section id="demographics">
+      <h2>Patient Demographics & Characteristics</h2>
+      
+      <h3>Study Population</h3>
+      <div class="stats-container">
+        <div class="stat-card">
+          <div class="stat-value">142</div>
+          <div class="stat-label">Total Patients<br>Complete Assessments</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">88</div>
+          <div class="stat-label">OSA Patients<br>(62% of cohort)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">54</div>
+          <div class="stat-label">Control Patients<br>(38% of cohort)</div>
+        </div>
+      </div>
+
+      <h3>OSA vs Control Comparison</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Characteristic</th>
+            <th>OSA Patients</th>
+            <th>Control Patients</th>
+            <th>P-Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Age (median)</strong></td>
+            <td>51 years</td>
+            <td>62 years</td>
+            <td><span class="significance">0.012</span></td>
+          </tr>
+          <tr>
+            <td><strong>BMI (median)</strong></td>
+            <td>32.89 kg/m²</td>
+            <td>26.55 kg/m²</td>
+            <td><span class="significance"><0.001</span></td>
+          </tr>
+          <tr>
+            <td><strong>Male Gender</strong></td>
+            <td>62.5%</td>
+            <td>35.2%</td>
+            <td><span class="significance">0.003</span></td>
+          </tr>
+          <tr>
+            <td><strong>Obesity Rate</strong></td>
+            <td>77.3%</td>
+            <td>38.9%</td>
+            <td><span class="significance"><0.001</span></td>
+          </tr>
+          <tr>
+            <td><strong>GERD</strong></td>
+            <td>60.0%</td>
+            <td>64.2%</td>
+            <td>0.758</td>
+          </tr>
+          <tr>
+            <td><strong>Asthma</strong></td>
+            <td>24.1%</td>
+            <td>31.5%</td>
+            <td>0.447</td>
+          </tr>
+          <tr>
+            <td><strong>COPD</strong></td>
+            <td>11.4%</td>
+            <td>22.2%</td>
+            <td>0.134</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>OSA Severity Distribution</h3>
+      <div class="chart-container">
+        <div class="bar-chart">
+          <div class="bar-item">
+            <div class="bar-label">
+              <span>Mild OSA</span>
+              <span>29 patients (33.0%)</span>
+            </div>
+            <div class="bar-background">
+              <div class="bar-fill" style="width: 33%;">33%</div>
+            </div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-label">
+              <span>Moderate OSA</span>
+              <span>22 patients (25.0%)</span>
+            </div>
+            <div class="bar-background">
+              <div class="bar-fill" style="width: 25%;">25%</div>
+            </div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-label">
+              <span>Severe OSA</span>
+              <span>37 patients (42.0%)</span>
+            </div>
+            <div class="bar-background">
+              <div class="bar-fill" style="width: 42%;">42%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="key-finding key-finding-blue">
+        <strong>Notable Pattern:</strong> Age increased across severity groups (Mild: 47 years → Moderate: 48.5 years → Severe: 58 years, p=0.001), 
+        while BMI plateaued between moderate and severe groups. Male predominance increased with severity from 48.3% (mild) to 78.4% (severe).
+      </div>
     </section>
 
-    <section>
-      <h2>In-Depth Results</h2>
-      <ul>
-        <li>Epiglottic prolapse showed highest reliability (κ=0.318, p<0.001).</li>
-        <li>Lower agreement observed for laryngomalacia and post-cricoid redundancy.</li>
-        <li>Age inversely correlated with epiglottic prolapse severity (β=–0.089, p=0.035).</li>
-        <li>No significant associations between traditional risk factors and laryngeal morphology.</li>
+    <section id="methods">
+      <h2>Detailed Methodology</h2>
+      
+      <div class="method-grid">
+        <div class="method-card method-card-1">
+          <h4>Study Design</h4>
+          <ul>
+            <li>Retrospective chart review</li>
+            <li>Adults ≥18 years</li>
+            <li>Fiberoptic laryngoscopy videos (2022-2023)</li>
+            <li>IRB approved protocol</li>
+          </ul>
+        </div>
+
+        <div class="method-card method-card-2">
+          <h4>Patient Selection</h4>
+          <ul>
+            <li>OSA confirmed by polysomnography</li>
+            <li>Controls: negative sleep study or clinical evaluation</li>
+            <li>Complete endoscopic data required</li>
+            <li>Clear diagnostic status</li>
+          </ul>
+        </div>
+
+        <div class="method-card method-card-3">
+          <h4>Assessment Protocol</h4>
+          <ul>
+            <li>Two board-certified otolaryngologists</li>
+            <li>Blinded independent review</li>
+            <li>Standardized rating scales</li>
+            <li>Consensus resolution of discrepancies</li>
+          </ul>
+        </div>
+
+        <div class="method-card method-card-4">
+          <h4>Statistical Analysis</h4>
+          <ul>
+            <li>Cohen's kappa for reliability</li>
+            <li>Logistic regression for associations</li>
+            <li>Mann-Whitney U for continuous variables</li>
+            <li>Significance: p < 0.05</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Laryngeal Features Assessed</h3>
+      <div class="stats-container">
+        <div class="stat-card" style="border-left-color: #667eea;">
+          <div class="stat-label"><strong style="font-size: 1.2rem; color: #667eea;">Arytenoid Configuration</strong><br>0-4 scale</div>
+        </div>
+        <div class="stat-card" style="border-left-color: #764ba2;">
+          <div class="stat-label"><strong style="font-size: 1.2rem; color: #764ba2;">Epiglottic Shape</strong><br>0-4 scale</div>
+        </div>
+        <div class="stat-card" style="border-left-color: #f093fb;">
+          <div class="stat-label"><strong style="font-size: 1.2rem; color: #f093fb;">Epiglottic Prolapse</strong><br>0-2 scale</div>
+        </div>
+        <div class="stat-card" style="border-left-color: #4facfe;">
+          <div class="stat-label"><strong style="font-size: 1.2rem; color: #4facfe;">Laryngomalacia</strong><br>Present/Absent</div>
+        </div>
+        <div class="stat-card" style="border-left-color: #43e97b;">
+          <div class="stat-label"><strong style="font-size: 1.2rem; color: #43e97b;">Post-Cricoid Redundancy</strong><br>Present/Absent</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reliability">
+      <h2>Inter-Rater Reliability Analysis</h2>
+      
+      <div class="highlight-box">
+        <h3>Hierarchical Reliability Pattern Observed</h3>
+        <p style="font-size: 1.1rem;">
+          Assessment reliability showed a clear hierarchical pattern, with epiglottic features demonstrating 
+          the highest agreement and post-cricoid redundancy showing minimal consensus.
+        </p>
+      </div>
+
+      <h3>Overall Population (n=142)</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Laryngeal Feature</th>
+            <th>Cohen's Kappa (κ)</th>
+            <th>Agreement (%)</th>
+            <th>P-Value</th>
+            <th>Interpretation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background: #e8f4f8;">
+            <td><strong>Epiglottic Shape</strong></td>
+            <td><strong>0.337</strong></td>
+            <td>77.9%</td>
+            <td><span class="significance"><0.001</span></td>
+            <td><span class="pill">Fair Agreement</span></td>
+          </tr>
+          <tr style="background: #e8f4f8;">
+            <td><strong>Epiglottic Prolapse</strong></td>
+            <td><strong>0.318</strong></td>
+            <td>80.7%</td>
+            <td><span class="significance"><0.001</span></td>
+            <td><span class="pill">Fair Agreement</span></td>
+          </tr>
+          <tr>
+            <td>Laryngomalacia</td>
+            <td>0.174</td>
+            <td>77.9%</td>
+            <td><span class="significance">0.035</span></td>
+            <td>Slight Agreement</td>
+          </tr>
+          <tr>
+            <td>Arytenoid Score</td>
+            <td>0.097</td>
+            <td>80.7%</td>
+            <td><span class="significance">0.012</span></td>
+            <td>Slight Agreement</td>
+          </tr>
+          <tr>
+            <td>Post-Cricoid Redundancy</td>
+            <td>0.085</td>
+            <td>60.0%</td>
+            <td>0.283</td>
+            <td>Minimal Agreement</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Reliability by Diagnostic Group</h3>
+      <div class="comparison-table">
+        <div class="data-visualization">
+          <h4 style="color: #2a5298; margin-bottom: 1rem;">OSA Subgroup (n=88)</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>κ</th>
+                <th>Agreement</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Epiglottic Shape</td>
+                <td>0.292***</td>
+                <td>72.7%</td>
+              </tr>
+              <tr>
+                <td>Epiglottic Prolapse</td>
+                <td>0.287***</td>
+                <td>75.0%</td>
+              </tr>
+              <tr>
+                <td>Laryngomalacia</td>
+                <td>0.045</td>
+                <td>77.3%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="data-visualization">
+          <h4 style="color: #2a5298; margin-bottom: 1rem;">Non-OSA Subgroup (n=54)</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>κ</th>
+                <th>Agreement</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background: #e8f4f8;">
+                <td>Epiglottic Shape</td>
+                <td><strong>0.440***</strong></td>
+                <td><strong>87.0%</strong></td>
+              </tr>
+              <tr style="background: #e8f4f8;">
+                <td>Epiglottic Prolapse</td>
+                <td><strong>0.456***</strong></td>
+                <td><strong>90.7%</strong></td>
+              </tr>
+              <tr>
+                <td>Laryngomalacia</td>
+                <td>0.353**</td>
+                <td>79.6%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="key-finding key-finding-purple">
+        <strong>Critical Observation:</strong> Controls showed moderate agreement for epiglottic features (κ=0.44-0.46), 
+        while OSA patients showed only fair agreement (κ=0.29). Laryngomalacia showed near-zero agreement in OSA patients 
+        (κ=0.045) but fair agreement in controls (κ=0.353), suggesting more ambiguous or variable presentations in OSA.
+      </div>
+    </section>
+
+    <section id="findings">
+      <h2>Key Research Findings</h2>
+      
+      <h3>Finding #1: Reviewer Prevalence Disparities</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Laryngeal Feature</th>
+            <th>Reviewer 1</th>
+            <th>Reviewer 2</th>
+            <th>Absolute Difference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Epiglottic Prolapse</td>
+            <td>8.3%</td>
+            <td>23.4%</td>
+            <td><strong style="color: #d9534f;">15.1%</strong></td>
+          </tr>
+          <tr>
+            <td>Arytenoid Abnormalities</td>
+            <td>2.1%</td>
+            <td>20.0%</td>
+            <td><strong style="color: #d9534f;">17.9%</strong></td>
+          </tr>
+          <tr>
+            <td>Abnormal Epiglottic Shape</td>
+            <td>15.9%</td>
+            <td>22.8%</td>
+            <td><strong style="color: #d9534f;">6.9%</strong></td>
+          </tr>
+          <tr>
+            <td>Laryngomalacia</td>
+            <td>17.2%</td>
+            <td>14.5%</td>
+            <td>2.7%</td>
+          </tr>
+          <tr>
+            <td>Post-Cricoid Redundancy</td>
+            <td>26.9%</td>
+            <td>33.1%</td>
+            <td>6.2%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Finding #2: Age-Epiglottic Prolapse Relationship</h3>
+      <div class="highlight-box">
+        <h3 style="color: white;">Inverse Correlation Identified</h3>
+        <div class="stats-container" style="margin-top: 1.5rem;">
+          <div class="stat-card">
+            <div class="stat-value">β = -0.089</div>
+            <div class="stat-label">Regression Coefficient</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">p = 0.035</div>
+            <div class="stat-label">Statistical Significance</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">ONLY</div>
+            <div class="stat-label">Significant Clinical<br>Predictor Found</div>
+          </div>
+        </div>
+        <p style="font-size: 1.15rem; margin-top: 1.5rem; line-height: 1.7;">
+          Younger patients exhibited significantly more pronounced epiglottic prolapse. This was the 
+          <strong>only significant clinical association</strong> identified in the entire analysis.
+        </p>
+      </div>
+
+      <h3>Finding #3: No Association with Traditional Risk Factors</h3>
+      <div class="stats-container">
+        <div class="stat-card" style="border-left-color: #999;">
+          <div class="stat-label"><strong style="font-size: 1.2rem;">OSA Severity</strong><br>No Prediction<br>p > 0.05</div>
+        </div>
+        <div class="stat-card" style="border-left-color: #999;">
+          <div class="stat-label"><strong style="font-size: 1.2rem;">BMI/Obesity</strong><br>No Prediction<br>p > 0.05</div>
+        </div>
+        <div class="stat-card" style="border-left-color: #999;">
+          <div class="stat-label"><strong style="font-size: 1.2rem;">GERD</strong><br>No Prediction<br>p > 0.05</div>
+        </div>
+        <div class="stat-card" style="border-left-color: #999;">
+          <div class="stat-label"><strong style="font-size: 1.2rem;">COPD</strong><br>No Prediction<br>p > 0.05</div>
+        </div>
+        <div class="stat-card" style="border-left-color: #999;">
+          <div class="stat-label"><strong style="font-size: 1.2rem;">Gender</strong><br>No Prediction<br>p > 0.05</div>
+        </div>
+      </div>
+
+      <div class="key-finding key-finding-green">
+        <strong>Paradigm Shift:</strong> The complete lack of association between traditional OSA risk factors and 
+        laryngeal morphology suggests these anatomical variations represent constitutional or structural characteristics 
+        rather than consequences of OSA pathophysiology. This supports a distinct phenotypic model.
+      </div>
+    </section>
+
+    <section id="discussion">
+      <h2>Expanded Discussion</h2>
+      
+      <h3>Clinical Significance of Laryngeal Involvement</h3>
+      <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+        The findings emphasize the critical yet often overlooked role of laryngeal structures, particularly the epiglottis, 
+        in OSA pathophysiology. While conventional models focus on oropharyngeal collapse, our data demonstrate that 
+        laryngeal features represent an independent anatomical consideration.
+      </p>
+
+      <div class="method-grid">
+        <div class="method-card method-card-1" style="border-top-color: #667eea;">
+          <h4>Epiglottic Phenotype</h4>
+          <p>Younger patients show more epiglottic involvement, potentially indicating unique etiological mechanisms 
+          independent of age-related tissue laxity. This may explain treatment failures in select patients unresponsive 
+          to conventional therapy.</p>
+        </div>
+
+        <div class="method-card method-card-2" style="border-top-color: #764ba2;">
+          <h4>Assessment Challenges</h4>
+          <p>The marked inter-reviewer disparities (8.3% vs 23.4% for epiglottic prolapse) highlight fundamental challenges 
+          in standardized assessment. This variability likely reflects differences in examiner thresholds rather than true 
+          measurement error.</p>
+        </div>
+
+        <div class="method-card method-card-3" style="border-top-color: #f093fb;">
+          <h4>CPAP Resistance</h4>
+          <p>Epiglottic collapse may worsen with positive pressure by pushing the epiglottis into the laryngeal aditus. 
+          This mechanism explains why some patients experience treatment failures with CPAP despite adequate pressure titration.</p>
+        </div>
+
+        <div class="method-card method-card-4" style="border-top-color: #4facfe;">
+          <h4>Surgical Interventions</h4>
+          <p>Site-specific surgeries (epiglottopexy, stiffening, partial epiglottectomy) show 75-90% success rates. 
+          Systematic reviews report safe and effective outcomes, with significant AHI reductions in properly selected patients.</p>
+        </div>
+      </div>
+
+      <h3>Need for Standardization</h3>
+      <div class="highlight-box">
+        <h3 style="color: white;">Priority Areas for Improvement</h3>
+        <ul style="font-size: 1.1rem; line-height: 1.8;">
+          <li><strong>Operationalized Definitions:</strong> Clear, measurable criteria for what constitutes "abnormal" findings</li>
+          <li><strong>Training Protocols:</strong> Structured programs requiring >100 evaluations to achieve expert-level proficiency</li>
+          <li><strong>Advanced Imaging:</strong> 3D reconstruction, dynamic cine MRI, or computational fluid dynamics for objective assessment</li>
+          <li><strong>AI-Assisted Scoring:</strong> Deep learning models achieving 70% F1 scores for automated DISE assessment</li>
+          <li><strong>Dynamic Evaluation:</strong> DISE identifies 10-40% epiglottic collapse vs 11% by awake exam alone</li>
+        </ul>
+      </div>
+
+      <h3>Future Research Directions</h3>
+      <ul style="font-size: 1.05rem; line-height: 1.8;">
+        <li>Genetic and collagen-related drivers of laryngeal laxity in younger patients</li>
+        <li>Laryngeal sensory deficits (38-61% show abnormal sensation) and correlation with morphology</li>
+        <li>Laryngopharyngeal reflux (49% prevalence) creating inflammation-collapse cycle</li>
+        <li>Superior laryngeal nerve stimulation as novel neuromodulation approach</li>
+        <li>Prospective outcomes studies correlating morphology with treatment response</li>
+        <li>Multi-level surgical approaches combining epiglottic surgery with hypoglossal nerve stimulation</li>
       </ul>
     </section>
 
-    <section>
-      <h2>Expanded Discussion</h2>
-      <p>
-        The findings emphasize the critical yet often overlooked role of laryngeal structures, particularly the epiglottis, in OSA pathophysiology. Younger patients appear especially susceptible, potentially indicating unique etiological mechanisms. The complexity of accurately identifying subtle features highlights the need for improved diagnostic frameworks. The clinical implications suggest targeted therapeutic interventions like epiglottopexy could significantly enhance treatment outcomes.
-      </p>
+    <section id="conclusions">
+      <h2>Conclusions & Clinical Implications</h2>
+      
+      <div class="highlight-box">
+        <h3 style="color: white;">Key Conclusions</h3>
+        <div class="stats-container" style="margin-top: 1.5rem;">
+          <div class="stat-card">
+            <div class="stat-label" style="font-size: 1.15rem; line-height: 1.6;">
+              <strong style="color: #2a5298;">Variable Reliability</strong><br>
+              Standardization urgently needed, particularly for post-cricoid and arytenoid assessment
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label" style="font-size: 1.15rem; line-height: 1.6;">
+              <strong style="color: #2a5298;">Distinct Phenotype</strong><br>
+              Epiglottic involvement represents independent anatomical consideration
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label" style="font-size: 1.15rem; line-height: 1.6;">
+              <strong style="color: #2a5298;">Age-Stratified Approach</strong><br>
+              Younger patients require targeted evaluation for laryngeal involvement
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Clinical Practice Recommendations</h3>
+      <div class="method-grid">
+        <div class="method-card method-card-1">
+          <h4>🔍 Diagnostic Approach</h4>
+          <ul>
+            <li>Maintain vigilance across all OSA phenotypes</li>
+            <li>Especially scrutinize younger patients</li>
+            <li>Consider DISE when symptoms persist</li>
+            <li>Don't rely solely on awake laryngoscopy</li>
+          </ul>
+        </div>
+
+        <div class="method-card method-card-2">
+          <h4>📊 Assessment Protocol</h4>
+          <ul>
+            <li>Use standardized rating systems</li>
+            <li>Document with reference images</li>
+            <li>Consider AI-assisted analysis</li>
+            <li>Obtain dynamic sleep endoscopy</li>
+          </ul>
+        </div>
+
+        <div class="method-card method-card-3">
+          <h4>💊 Treatment Strategy</h4>
+          <ul>
+            <li>Recognize CPAP may worsen epiglottic collapse</li>
+            <li>Consider site-specific surgery</li>
+            <li>Epiglottopexy shows 75-90% success</li>
+            <li>Multi-level approaches for complex cases</li>
+          </ul>
+        </div>
+
+        <div class="method-card method-card-4">
+          <h4>🔬 Research Priorities</h4>
+          <ul>
+            <li>Prospective outcome studies</li>
+            <li>Genetic/collagen investigations</li>
+            <li>Sensory nerve pathway research</li>
+            <li>Neuromodulation approaches</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="key-finding key-finding-pink" style="font-size: 1.2rem; padding: 2rem;">
+        <strong>Bottom Line:</strong> Laryngeal morphology, particularly epiglottic involvement, represents an important but 
+        underrecognized contributor to OSA that warrants systematic evaluation. The independence from traditional risk factors 
+        and preferential occurrence in younger patients suggests a distinct phenotype requiring targeted diagnostic and 
+        therapeutic approaches.
+      </div>
     </section>
 
-    <section>
-      <h2>Conclusion</h2>
-      <p>
-        Recognition and standardized assessment of laryngeal features, notably epiglottic prolapse, are crucial in understanding and managing adult OSA. Incorporating advanced diagnostic and therapeutic modalities into clinical practice promises improved patient outcomes, particularly among younger or traditionally resistant cases.
-      </p>
+    <section id="tables">
+      <h2>Complete Data Tables</h2>
+      
+      <h3>Table 1: Cohort Demographics by OSA Severity</h3>
+      <div style="overflow-x: auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>Characteristic</th>
+              <th>None (n=54)</th>
+              <th>Mild (n=29)</th>
+              <th>Moderate (n=22)</th>
+              <th>Severe (n=37)</th>
+              <th>P-Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Age, median (IQR)</strong></td>
+              <td>62.0 [44.0, 71.8]</td>
+              <td>47.0 [37.0, 53.0]</td>
+              <td>48.5 [39.0, 62.0]</td>
+              <td>58.0 [47.0, 70.0]</td>
+              <td><span class="significance">0.001</span></td>
+            </tr>
+            <tr>
+              <td><strong>BMI, median (IQR)</strong></td>
+              <td>26.6 [23.9, 33.5]</td>
+              <td>32.3 [29.3, 34.7]</td>
+              <td>33.2 [30.7, 39.0]</td>
+              <td>33.8 [30.0, 37.0]</td>
+              <td><span class="significance"><0.001</span></td>
+            </tr>
+            <tr>
+              <td><strong>Male Gender</strong></td>
+              <td>35.2%</td>
+              <td>48.3%</td>
+              <td>54.5%</td>
+              <td>78.4%</td>
+              <td><span class="significance">0.001</span></td>
+            </tr>
+            <tr>
+              <td><strong>Obesity</strong></td>
+              <td>38.9%</td>
+              <td>69.0%</td>
+              <td>77.3%</td>
+              <td>83.8%</td>
+              <td><span class="significance"><0.001</span></td>
+            </tr>
+            <tr>
+              <td><strong>Current/Former Smoker</strong></td>
+              <td>43.4%</td>
+              <td>24.1%</td>
+              <td>36.4%</td>
+              <td>51.4%</td>
+              <td>0.146</td>
+            </tr>
+            <tr>
+              <td><strong>GERD</strong></td>
+              <td>64.2%</td>
+              <td>55.2%</td>
+              <td>65.0%</td>
+              <td>61.1%</td>
+              <td>0.861</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Table 2: Prevalence of Laryngeal Morphology Abnormalities</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Feature & Severity</th>
+            <th>Reviewer 1</th>
+            <th>Reviewer 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="3" style="background: #e8f4f8; font-weight: 600;">Epiglottic Shape (0-4)</td>
+          </tr>
+          <tr>
+            <td style="padding-left: 2rem;">Normal (0)</td>
+            <td>122 (84.1%)</td>
+            <td>112 (77.2%)</td>
+          </tr>
+          <tr>
+            <td style="padding-left: 2rem;">Mild abnormality (1)</td>
+            <td>15 (10.3%)</td>
+            <td>21 (14.5%)</td>
+          </tr>
+          <tr>
+            <td style="padding-left: 2rem;">Moderate+ (2-4)</td>
+            <td>8 (5.5%)</td>
+            <td>12 (8.3%)</td>
+          </tr>
+          <tr>
+            <td colspan="3" style="background: #e8f4f8; font-weight: 600;">Epiglottic Prolapse (0-2)</td>
+          </tr>
+          <tr>
+            <td style="padding-left: 2rem;">None (0)</td>
+            <td>133 (91.7%)</td>
+            <td>111 (76.6%)</td>
+          </tr>
+          <tr>
+            <td style="padding-left: 2rem;">Mild (1)</td>
+            <td>10 (6.9%)</td>
+            <td>30 (20.7%)</td>
+          </tr>
+          <tr>
+            <td style="padding-left: 2rem;">Severe (2)</td>
+            <td>2 (1.4%)</td>
+            <td>4 (2.8%)</td>
+          </tr>
+          <tr>
+            <td colspan="3" style="background: #e8f4f8; font-weight: 600;">Laryngomalacia</td>
+          </tr>
+          <tr>
+            <td style="padding-left: 2rem;">Present</td>
+            <td>25 (17.2%)</td>
+            <td>21 (14.5%)</td>
+          </tr>
+          <tr>
+            <td colspan="3" style="background: #e8f4f8; font-weight: 600;">Post-Cricoid Redundancy</td>
+          </tr>
+          <tr>
+            <td style="padding-left: 2rem;">Present</td>
+            <td>39 (26.9%)</td>
+            <td>48 (33.1%)</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
+
+    <div class="authors-list">
+      <h3 style="color: #2a5298; margin-bottom: 1rem;">Study Authors</h3>
+      <p style="line-height: 1.8;">
+        <strong>Harris, Alexandria, MD, MS¹</strong> | Carlson, Katie M., MPH¹·² | Liu, Shirley Xiaosu, MS³ | 
+        Mazul, Angela L., PhD, MPH¹·² | Bourguillon, Olivier, MD¹ | Garand, Kendrea L., PhD, CScD, CCC-SLP, BCS-S⁴ | 
+        Kaffenberger, Thomas, MD¹ | Stinnett, Sandra, MD¹
+      </p>
+      <p style="margin-top: 1rem; font-size: 0.95rem; color: #666;">
+        ¹ UPMC Department of Otolaryngology | ² Cancer Epidemiology and Prevention Program, UPMC Hillman Cancer Center | 
+        ³ University of Pittsburgh School of Medicine | ⁴ Department of Communication Science and Disorders, University of Pittsburgh
+      </p>
+    </div>
   </div>
+
   <footer>
-    © 2025 UPMC Department of Otolaryngology | Comprehensive Study on OSA
+    <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">© 2025 UPMC Department of Otolaryngology</p>
+    <p>Comprehensive Study on Laryngeal Morphology in Obstructive Sleep Apnea</p>
+    <p style="margin-top: 1rem; font-size: 0.95rem; opacity: 0.9;">University of Pittsburgh School of Medicine | Pittsburgh, PA</p>
   </footer>
+
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // Animate bars on scroll
+    const observerOptions = {
+      threshold: 0.3,
+      rootMargin: '0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.querySelectorAll('.bar-fill').forEach(bar => {
+            bar.style.width = bar.getAttribute('data-width') || bar.style.width;
+          });
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.bar-chart').forEach(chart => {
+      observer.observe(chart);
+    });
+
+    // Store original widths
+    document.querySelectorAll('.bar-fill').forEach(bar => {
+      const width = bar.style.width;
+      bar.setAttribute('data-width', width);
+      bar.style.width = '0%';
+    });
+  </script>
 </body>
 </html>
